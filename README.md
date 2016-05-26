@@ -38,7 +38,7 @@ Description: An example of output that can be constructed using plotGeneTracks f
 #Extra:
 
 *Advanced users*
-You may wish to access and edit the data set that I have compiled to include your own ontologies/annotations. 
+You may wish to access and edit the data set that I have compiled to include your own raw data or ontologies. 
 It is possible to do so by editing the object "expand" which is present in the environment after loading the source code. 
-I don't recommend overwriting the .Rdata file for safety.
+I don't recommend overwriting the .Rdata file for safety. 
 
