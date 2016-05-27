@@ -35,10 +35,13 @@ You may choose to categorize genes, which will be reflected in the plot with row
 Filename: testPlot.PDF
 Description: An example of output that can be constructed using plotGeneTracks function in the test.R script. A color scale is provided at the topright corner of the plot, along with row and column annotation names if applicable. The scale is logarithmic, though not all ontologies are continuous measures. Fetal brain expression data are log2(Reads Per Kilobase per Million mapped reads) RNA-sequencing data from postmortem fetal brain samples, originating from BrainSpan Database. GWAS summary statistics are presented as -log10(p-values). Gene-wide interolerance to loss-of-function mutations were obtained from Exome Aggregation Consortium, and presented as -log10(P-values). 
 
-#Extra:
+# Notices:
 
 *Advanced users*
 You may wish to access and edit the data set that I have compiled to include your own raw data or ontologies. 
 It is possible to do so by editing the object "expand" which is present in the environment after loading the source code. 
 I don't recommend overwriting the .Rdata file for safety. 
+
+## Updates:
+version 1.2 - Druggable targets features the following disease categories: neuropsychiatric, neuroinflammation, neurodegenerative, autoimmune, cardiovascular, cancer, viral, pain, and inflammation
 
