@@ -33,7 +33,10 @@ gwasSet = c("SZ", "MDD", "CD", "IBD", "ADHD", "ASD", "MDD", "BP","EVRSMK")
 
 dev.off() ## clear the plotting space
 
-saveFileExtension = "E:/Geneannotationtool_testv2.pdf"
+saveFileExtension = "E:/Geneannotationtool_testv2.pdf" ## Location and filename of plot (required)
+
+pdf(width = 16, height = 10) ## You can adjust the dimensions of the PDF file.
+
 
 plotGeneTracks(geneSet = geneSet, brainRegions = brainRegions, gwasSet = gwasSet)
 
