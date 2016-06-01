@@ -11,7 +11,7 @@ if("pheatmap" %in% rownames(installed.packages()) == FALSE) {install.packages("p
 if("pheatmap" %in% rownames(installed.packages()) == TRUE) {require(pheatmap)}
 
 
-plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasSet = gwasSet) {
+plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasSet = gwasSet, saveFile = TRUE, fileWidth = fileWidth, fileHeight = fileHeight) {
   
   if(length(geneSet) > 1000){stop("It is not recommended to input >1000 genes at once. Please trim the list and try again...")}
  
@@ -111,6 +111,10 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
                max(seq.gaps)+ncol(select.list[[2]])+33,
                max(seq.gaps)+ncol(select.list[[2]])+53)
   
+  if(saveFile == TRUE){
+    
+    pdf(width = fileWidth, height = fileHeight)
+  
   if(length(geneClass) > 0){
     pheatmap(plot.list, file = saveFileExtension, gaps_col = seq.gaps, annotation_names_row = FALSE, annotation_names_col = FALSE, annotation_col = annot_col, annotation_row = annot_row, cluster_col = FALSE, cluster_row = FALSE)
   }
@@ -119,6 +123,21 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
     pheatmap(plot.list, file = saveFileExtension, gaps_col = seq.gaps, annotation_names_row = FALSE, annotation_names_col = FALSE, annotation_col = annot_col, cluster_col = FALSE, cluster_row = FALSE)
   }
   
+     dev.off()
+  }
   
+  if(saveFile == FALSE){
+    
+    
+    if(length(geneClass) > 0){
+      pheatmap(plot.list,  gaps_col = seq.gaps, annotation_names_row = FALSE, annotation_names_col = FALSE, annotation_col = annot_col, annotation_row = annot_row, cluster_col = FALSE, cluster_row = FALSE)
+    }
+    
+    if(length(geneClass) == 0){
+      pheatmap(plot.list, gaps_col = seq.gaps, annotation_names_row = FALSE, annotation_names_col = FALSE, annotation_col = annot_col, cluster_col = FALSE, cluster_row = FALSE)
+    }
+    
+  }
   
+  print(head(plot.list))
 }
