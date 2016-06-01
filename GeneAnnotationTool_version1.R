@@ -139,4 +139,5 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
     
   }
   
+  pDF <<- plot.list
 }
