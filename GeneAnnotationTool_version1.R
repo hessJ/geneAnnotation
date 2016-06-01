@@ -139,5 +139,4 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
     
   }
   
-  print(head(plot.list))
 }
