@@ -45,3 +45,5 @@ I don't recommend overwriting the .Rdata file for safety.
 ## Updates:
 version 1.2 - Druggable targets features the following disease categories: neuropsychiatric, neuroinflammation, neurodegenerative, autoimmune, cardiovascular, cancer, viral, pain, and inflammation
 
+June 1, 20156: plotGeneTracks now accepts choice of saving/not saving plot to file. fileWidth and fileHeight allow user to adjust dimensions of the heatmap (minimum recommended 12 x 10). 
+
