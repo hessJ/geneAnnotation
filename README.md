@@ -4,6 +4,12 @@ Create an accessible and information-rich plot of gene ontologies.
 ## Disclaimer:
 I made substantial use of publically available knowledgebases and summary statistics from published studies. Data are presented as is and without warranty. These data and software are intended for academic and educational purposes only. I took certain liberties when processing, curating, and combining ontologies and raw data in order to simplify visualization of dense information. This software is being released as a developmental version and may change drastically over time. 
 
+## Link to download data formatted for plotGeneTracks()
+
+https://www.synapse.org/#!Synapse:syn6192548
+
+
+
 ## Please cite the following if you make use of this tool:
 1. Therapeutic Targets Database (http://bidd.nus.edu.sg/group/cjttd/)
 2. Psychiatric Genomics Consortium Cross-Disorder Group (PMID: 23453885)
