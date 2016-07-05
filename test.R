@@ -32,7 +32,7 @@ gwasSet = c("SZ", "MDD", "CD", "IBD", "ADHD", "ASD", "MDD", "BP","EVRSMK")
 
 dev.off() ## clear the plotting space
 
-saveFileExtension = "C:/geneAnnotationTool_update.1.3.pdf"
+saveFileExtension = "geneAnnotationTool_update.1.3.pdf"
 
 
 ## Optional: save file 
