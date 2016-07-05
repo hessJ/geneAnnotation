@@ -1,7 +1,7 @@
 
 ## Set a working direction -- the folder must contain GeneAnnotationTool_version(x).R and GeneAnnotatioTool_data.Rdata
 
-cd = "E:/GeneAnnotationTool"
+cd = <type working directory in quotes>
 
 setwd(cd)
 
