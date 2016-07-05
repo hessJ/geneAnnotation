@@ -114,11 +114,11 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
     pdf(width = fileWidth, height = fileHeight)
   
   if(length(geneClass) > 0){
-    pheatmap(plot.list, file = saveFileExtension, gaps_col = seq.gaps, annotation_names_row = FALSE, annotation_names_col = FALSE, annotation_col = annot_col, annotation_row = annot_row, cluster_col = FALSE, cluster_row = FALSE)
+    pheatmap(plot.list, file = saveFileExtension, col = colorRampPalette(c("white", "dodgerblue", "yellow", "firebrick"))(25), gaps_col = seq.gaps, annotation_names_row = FALSE, annotation_names_col = FALSE, annotation_col = annot_col, annotation_row = annot_row, cluster_col = FALSE, cluster_row = FALSE)
   }
   
   if(length(geneClass) == 0){
-    pheatmap(plot.list, file = saveFileExtension, gaps_col = seq.gaps, annotation_names_row = FALSE, annotation_names_col = FALSE, annotation_col = annot_col, cluster_col = FALSE, cluster_row = FALSE)
+    pheatmap(plot.list, file = saveFileExtension, col = colorRampPalette(c("white", "dodgerblue", "yellow", "firebrick"))(25), gaps_col = seq.gaps, annotation_names_row = FALSE, annotation_names_col = FALSE, annotation_col = annot_col, cluster_col = FALSE, cluster_row = FALSE)
   }
   
      dev.off()
@@ -128,11 +128,11 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
     
     
     if(length(geneClass) > 0){
-      pheatmap(plot.list,  gaps_col = seq.gaps, annotation_names_row = FALSE, annotation_names_col = FALSE, annotation_col = annot_col, annotation_row = annot_row, cluster_col = FALSE, cluster_row = FALSE)
+      pheatmap(plot.list, col = colorRampPalette(c("white", "dodgerblue", "yellow", "firebrick"))(25),  gaps_col = seq.gaps, annotation_names_row = FALSE, annotation_names_col = FALSE, annotation_col = annot_col, annotation_row = annot_row, cluster_col = FALSE, cluster_row = FALSE)
     }
     
     if(length(geneClass) == 0){
-      pheatmap(plot.list, gaps_col = seq.gaps, annotation_names_row = FALSE, annotation_names_col = FALSE, annotation_col = annot_col, cluster_col = FALSE, cluster_row = FALSE)
+      pheatmap(plot.list,col = colorRampPalette(c("white", "dodgerblue", "yellow", "firebrick"))(25), gaps_col = seq.gaps, annotation_names_row = FALSE, annotation_names_col = FALSE, annotation_col = annot_col, cluster_col = FALSE, cluster_row = FALSE)
     }
     
   }
@@ -140,3 +140,4 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
   pDF <<- plot.list
   
 }
+
