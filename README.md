@@ -45,8 +45,11 @@ I don't recommend overwriting the .Rdata file for safety.
 ## Updates:
 version 1.2 - Druggable targets features the following disease categories: neuropsychiatric, neuroinflammation, neurodegenerative, autoimmune, cardiovascular, cancer, viral, pain, and inflammation
 
-June 1, 20156: plotGeneTracks now accepts choice of saving/not saving plot to file. fileWidth and fileHeight allow user to adjust dimensions of the heatmap (minimum recommended 12 x 10). 
+v1.2 June 1, 2016: plotGeneTracks now accepts choice of saving/not saving plot to file. fileWidth and fileHeight allow user to adjust dimensions of the heatmap (minimum recommended 12 x 10). 
 ```R
 print(pDF) #returns a matrix of gene annotations.
 ```
+
+version 1.3: plotGeneTracks now features gene expression data downloaded from GTEx across 48 tissues (RNA-seq v6). Read counts were normalized using limma's VOOM function (logCPM) followed by quantile normalization. 
+
 
