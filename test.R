@@ -16,18 +16,8 @@ load("GeneAnnotationTool_data_version1.3.Rdata")
 
 geneSet = c("DRD2", "ZNF804A", "COMT", "MAOA", "PDE4B", "MCAM", "NCAM", "SLC1A1", "SLC9A9", "RELN", "TYMS")
 
-geneSet = read.csv("G:/Manuscripts/Splicing_GWAS/clnc3_genemania.csv", header = T)
-geneSet = geneSet[geneSet$Gene.1 %in% "CLCN3" | geneSet$Gene.2 %in% "CLCN3",]
-geneSet = unique(c(as.character(geneSet$Gene.1), as.character(geneSet$Gene.2)))
-
-geneSet = read.csv("E:/CommonMind/RNAseq/Results/wgcna/WGCNA_hubmeta.info.csv", header = T)
-geneSet  = geneSet$gene_symbol
-
 ## You can sub-group genes by inputting categories manually
 
-
-geneClass = read.csv("E:/CommonMind/RNAseq/Results/wgcna/WGCNA_hubmeta.info.csv", header = T)
-geneClass = geneClass$moduleColor
 geneClass = rep("black", length(geneSet))
 
 ## list abbreviations for brain regions of interest:
@@ -42,7 +32,7 @@ gwasSet = c("SZ", "MDD", "CD", "IBD", "ADHD", "ASD", "MDD", "BP","EVRSMK")
 
 dev.off() ## clear the plotting space
 
-saveFileExtension = "E:/geneAnnotationTool_update.1.3.pdf"
+saveFileExtension = "C:/geneAnnotationTool_update.1.3.pdf"
 
 
 ## Optional: save file 
