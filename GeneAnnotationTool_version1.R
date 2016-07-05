@@ -16,10 +16,11 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
   if(length(geneSet) > 1000){stop("It is not recommended to input >1000 genes at once. Please trim the list and try again...")}
  
   select.list = list()
+
   
-  for( i in 1:length(expand)){
+  for( i in 1:length(update.1.3)){
     
-    temp = expand[[i]]
+    temp = update.1.3[[i]]
     
     matches = which(rownames(temp) %in% geneSet)
     
@@ -41,11 +42,11 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
   
   regionNames = c(early, mid,late)
   
-  temp = select.list[[1]]
+  temp = select.list[[2]]
   
   temp = temp[,colnames(temp) %in% regionNames]
   
-  select.list[[1]] = temp
+  select.list[[2]] = temp
   
   
   
@@ -61,28 +62,29 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
   ## choose GWAS data sets of interest 
   
   gwasSet = paste(gwasSet, "_logP", sep = "")
-  temp = select.list[[2]]
+  temp = select.list[[3]]
   temp
   
   temp = temp[,colnames(temp) %in% c("gene_symbol", gwasSet)]
-  select.list[[2]] = temp
+  select.list[[3]] = temp
   
   ###
   
-  select.list[[3]] = select.list[[3]][,-3]
+  select.list[[4]] = select.list[[4]][,-3]
   
   plot.list = Reduce(function(x,y) merge(x,y, all = T), select.list)
   plot.list = plot.list[,!colnames(plot.list) %in% "y"]
   
   plot.list = plot.list[!duplicated(plot.list),]
   
-  annot_col = c(rep("Fetal brain expression", ncol(select.list[[1]])-1), 
-                rep("GWAS", ncol(select.list[[2]])-1), 
+  annot_col = c(rep("GTEx Tissue Expression", ncol(select.list[[1]])-1),
+                rep("Fetal brain expression", ncol(select.list[[2]])-1), 
+                rep("GWAS", ncol(select.list[[3]])-1), 
                 rep("ExAC", 1), 
                 rep("Human-Mouse disease connections", 4), 
-                rep("Cell Markers", ncol(select.list[[5]])-1),
-                rep("Subcellular localization", ncol(select.list[[6]])-1),
-                rep("Druggable targets", ncol(select.list[[7]])-1))
+                rep("Cell Markers", ncol(select.list[[6]])-1),
+                rep("Subcellular localization", ncol(select.list[[7]])-1),
+                rep("Druggable targets", ncol(select.list[[8]])-1))
   
   annot_col = as.matrix(annot_col)
   rownames(annot_col) = colnames(plot.list)[-1]
@@ -101,15 +103,11 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
   
   plot.list[plot.list == 0]  <- NA
   
-  brainGaps = length(brainRegions)
+  seq.gaps = lapply(select.list, ncol)
+  seq.gaps = lapply(seq.gaps, function(x) x - 1)
+  seq.gaps = cumsum(seq.gaps)
+  seq.gaps = seq.gaps[-which(seq.gaps %in% max(seq.gaps))]
   
-  seq.gaps = seq(from = brainGaps, by= (brainGaps*3)/3, to = brainGaps*3)
-  seq.gaps = c(seq.gaps, 
-               max(seq.gaps)+ncol(select.list[[2]])-1, 
-               max(seq.gaps)+ncol(select.list[[2]]), 
-               max(seq.gaps)+ncol(select.list[[2]])+4,
-               max(seq.gaps)+ncol(select.list[[2]])+33,
-               max(seq.gaps)+ncol(select.list[[2]])+53)
   
   if(saveFile == TRUE){
     
@@ -140,4 +138,5 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
   }
   
   pDF <<- plot.list
+  
 }
