@@ -15,7 +15,8 @@ I made substantial use of publically available knowledgebases and summary statis
 8. "Deconvolution of Blood Microarray Data Identifies Cellular Activation Patterns in Systemic Lupus Erythematosus" Abbas et al. (2009) (PMID: 19568420)
 9. Molecular Signatures Database (http://software.broadinstitute.org/gsea/msigdb)
 10. Exome Aggregation Consortium (http://exac.broadinstitute.org/)
-11. geneAnnotation Github repository 
+11. Genotype-Tissue Expression Project. "Human genomics. The Genotype-Tissue Expression (GTEx) pilot analysis: multitissue gene regulation in humans." Ardlie et al. (2015) (PMID: 25954001)
+12. geneAnnotation Github repository 
 
 ## Items found in the repository
 
