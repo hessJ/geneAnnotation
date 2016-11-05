@@ -63,4 +63,4 @@ print(pDF) #returns a matrix of gene annotations.
 
 version 1.3: plotGeneTracks now features gene expression data downloaded from GTEx across 48 tissues (RNA-seq v6). Read counts were normalized using limma's VOOM function (logCPM) followed by quantile normalization. 
 
-
+version 1.4: Genes with low- and high-probability of loss-of-function intolerance are categorically defined in ExAC reference data set. High tolerance = 0 (pLI < 0.90), Low tolerance = 1 - 4 (pLI > 0.9, pLI > 0.95, pLI > 0.99, pLI > 0.999). 
