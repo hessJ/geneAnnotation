@@ -8,8 +8,8 @@ setwd(cd)
 
 source("GeneAnnotationTool_version1.R")
 # load("GeneAnnotationTool_data_version1.2.Rdata")
-load("GeneAnnotationTool_data_version1.3.Rdata")
-
+# load("GeneAnnotationTool_data_version1.3.Rdata")
+load("GeneAnnotationTool_data_version1.4.Rdata") # <--- latest version of data set 
 
 
 # list a set of genes 
