@@ -18,9 +18,9 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
   select.list = list()
 
   
-  for( i in 1:length(update.1.3)){
+  for( i in 1:length(update.1.4)){
     
-    temp = update.1.3[[i]]
+    temp = update.1.4[[i]]
     
     matches = which(rownames(temp) %in% geneSet)
     
