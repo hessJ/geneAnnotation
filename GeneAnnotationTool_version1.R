@@ -92,11 +92,14 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
   colnames(annot_col) = "Annotation tracks"
   
   annot_row=geneSet
-  annot_row = annot_row[match(plot.list[,1], annot_row)]
-  groups = geneClass[match(plot.list[,1], annot_row)]
-  groups= as.data.frame(groups)
-  rownames(groups) = annot_row
+  ar =  cbind(annot_row, geneClass)
+  groups = as.data.frame(ar)
+  nm = groups[,1]
+  groups = groups[,2]
+  groups = as.data.frame(groups)
+  rownames(groups) = nm
   annot_row = groups
+  plot.list = plot.list[match(rownames(groups), plot.list[,1]), ]
   
   rownames(plot.list) = plot.list$gene_symbol
   plot.list = plot.list[,-1]
