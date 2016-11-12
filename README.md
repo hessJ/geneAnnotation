@@ -2,7 +2,7 @@
 Create an accessible and information-rich plot of gene ontologies.
 
 ## Disclaimer:
-I made substantial use of publically available knowledgebases and summary statistics from published studies. Data are presented as is and without warranty. These data and software are intended for academic and educational purposes only. I took certain liberties when processing, curating, and combining ontologies and raw data in order to simplify visualization of dense information. This software is being released as a developmental version and may change drastically over time. 
+I made substantial use of publically available knowledgebases and summary statistics from published studies. Data are presented as is and without warranty. This software is intended for academic and educational purposes only. I took certain liberties when processing, curating, and combining ontologies and raw data in order to simplify visualization of dense information. This software is being released as a developmental version and may change drastically over time. 
 
 ## Link to download data formatted for plotGeneTracks()
 
