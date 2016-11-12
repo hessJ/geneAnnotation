@@ -51,7 +51,7 @@ It is possible to do so by editing the object:
 update.<version>
 ```
 , which is present in the environment after loading the source code. 
-I don't recommend overwriting the .Rdata file for safety. 
+Attemting to re-write the source .Rdata is not recommended.
 
 ## Updates:
 version 1.2 - Druggable targets features the following disease categories: neuropsychiatric, neuroinflammation, neurodegenerative, autoimmune, cardiovascular, cancer, viral, pain, and inflammation
