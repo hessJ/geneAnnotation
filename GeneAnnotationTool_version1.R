@@ -116,6 +116,7 @@ plotGeneTracks <- function(geneSet = geneSet, brainRegions = brainRegions, gwasS
   names(annot_colors) = unique(annot_col[,1])
   annot_colors = list("Annotation tracks" = annot_colors)
   
+   hidden = "s"
   
   
   
