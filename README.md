@@ -64,3 +64,19 @@ print(pDF) #returns a matrix of gene annotations.
 version 1.3: plotGeneTracks now features gene expression data downloaded from GTEx across 48 tissues (RNA-seq v6). Read counts were normalized using limma's VOOM function (logCPM) followed by quantile normalization. 
 
 version 1.4: Genes with low- and high-probability of loss-of-function intolerance predicted by pLI scores from ExAC reference data are stratified into categories. High tolerance = 0 (pLI < 0.90), Low tolerance = 1 - 4 (pLI > 0.9, pLI > 0.95, pLI > 0.99, pLI > 0.999). 
+
+
+#### GNU GENERAL PUBLIC LICENSE v3
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
